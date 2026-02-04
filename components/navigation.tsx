@@ -52,7 +52,7 @@ export function Navigation() {
 
           {/* CTA Button */}
           <motion.a
-            href="https://rajatsharma.in"
+            // href="https://rajatsharma.in"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-block px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-shadow text-sm"
