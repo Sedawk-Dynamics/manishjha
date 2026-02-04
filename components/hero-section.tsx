@@ -1,9 +1,49 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useState } from 'react'
+import Image from 'next/image'
 
 export function HeroSection() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const images = [
+    {
+      src: '/images/1.jpeg',
+      alt: 'War Correspondent - Press Coverage',
+      title: 'Press Coverage',
+    },
+    {
+      src: '/images/2.jpeg',
+      alt: 'Studio Professional',
+      title: 'Studio Professional',
+    },
+    {
+      src: '/images/3.jpeg',
+      alt: 'International Assignment',
+      title: 'International Assignment',
+    },
+    {
+      src: '/images/4.jpeg',
+      alt: 'Award & Recognition',
+      title: 'Award & Recognition',
+    },
+    {
+      src: '/images/5.jpeg',
+      alt: 'Global Reporting',
+      title: 'Global Reporting',
+    },
+  ]
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length)
+  }
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
+  }
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -75,6 +115,7 @@ export function HeroSection() {
             >
               Award-winning war correspondent and foreign affairs specialist with over 20 years of
               global reporting experience. Honored with Russia's prestigious Honest View Award 2025.
+              Covering international conflicts, diplomacy, and critical global affairs from 25+ countries.
             </motion.p>
 
             <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
@@ -112,31 +153,76 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right side - Image placeholder with animation */}
+          {/* Right side - Image Carousel */}
           <motion.div variants={itemVariants} className="relative">
-            <motion.div
-              className="relative w-full aspect-square bg-gradient-to-br from-primary/20 to-muted rounded-2xl overflow-hidden"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-            >
+            <div className="relative w-full aspect-square">
+              {/* Main image carousel */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="text-6xl">🎥</div>
-                  <p className="text-primary font-semibold">War Correspondent</p>
-                  <p className="text-muted-foreground">Global Affairs Specialist</p>
-                </div>
+                className="relative w-full h-full bg-card rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
+                <Image
+                  src={images[currentImageIndex].src || "/placeholder.svg"}
+                  alt={images[currentImageIndex].alt}
+                  fill
+                  className="object-cover"
+                  priority
+                  quality={90}
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+                {/* Image title overlay */}
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 p-6 text-white"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  key={currentImageIndex}
+                >
+                  <p className="text-lg font-semibold">{images[currentImageIndex].title}</p>
+                </motion.div>
+              </motion.div>
+
+              {/* Navigation buttons */}
+              <motion.button
+                onClick={prevImage}
+                className="absolute -left-6 top-1/2 -translate-y-1/2 bg-primary text-primary-foreground p-3 rounded-full hover:shadow-lg transition-shadow z-20"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <ChevronLeft size={24} />
+              </motion.button>
+
+              <motion.button
+                onClick={nextImage}
+                className="absolute -right-6 top-1/2 -translate-y-1/2 bg-primary text-primary-foreground p-3 rounded-full hover:shadow-lg transition-shadow z-20"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <ChevronRight size={24} />
+              </motion.button>
+
+              {/* Image indicators */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                {images.map((_, idx) => (
+                  <motion.button
+                    key={idx}
+                    onClick={() => setCurrentImageIndex(idx)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      idx === currentImageIndex ? 'bg-primary w-8' : 'bg-white/50 hover:bg-white'
+                    }`}
+                    whileHover={{ scale: 1.2 }}
+                  />
+                ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Floating badge */}
             <motion.div
-              className="absolute -bottom-6 -right-6 bg-card border border-primary rounded-xl p-4 shadow-2xl"
+              className="absolute -bottom-6 -right-6 bg-card border-2 border-primary rounded-xl p-4 shadow-2xl"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
             >
