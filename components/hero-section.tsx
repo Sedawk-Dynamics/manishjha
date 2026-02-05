@@ -102,10 +102,16 @@ export function HeroSection() {
                 Manish Jha
               </motion.h1>
               <motion.p
-                className="text-2xl text-muted-foreground italic font-light"
+                className="text-xl lg:text-2xl text-primary font-semibold leading-tight"
                 variants={itemVariants}
               >
-                Executive Editor, TV9 Bharatvarsh
+                Journalist | Global Affairs & Security Analyst | Strategic Advisor
+              </motion.p>
+              <motion.p
+                className="text-lg text-muted-foreground font-medium"
+                variants={itemVariants}
+              >
+                Executive Editor, TV9 Bharatvarsh | War Correspondent | International Assignments
               </motion.p>
             </motion.div>
 

@@ -7,9 +7,21 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', href: '#' },
-    { icon: Twitter, label: 'Twitter', href: '#' },
-    { icon: Facebook, label: 'Facebook', href: '#' },
+    {
+      icon: Linkedin,
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/manish-jha-02715ab0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    },
+    {
+      icon: Twitter,
+      label: 'Twitter',
+      href: 'https://x.com/manishjhatweets?s=21',
+    },
+    {
+      icon: Facebook,
+      label: 'Facebook',
+      href: 'https://www.facebook.com/share/1BvuHeMa4a/?mibextid=wwXIfr',
+    },
   ]
 
   const containerVariants = {
@@ -44,26 +56,29 @@ export function Footer() {
         >
           {/* About */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold text-foreground mb-4">Manish Jha</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">
+              Manish Jha
+            </h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Award-winning war correspondent and Executive Editor covering global affairs and international conflicts.
+              Award-winning war correspondent and Executive Editor covering
+              global affairs and international conflicts.
             </p>
-            <motion.div
-              className="flex gap-4"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-            >
+
+            <motion.div className="flex gap-4">
               {socialLinks.map((social, index) => {
                 const Icon = social.icon
                 return (
                   <motion.a
                     key={index}
                     href={social.href}
-                    className="w-10 h-10 rounded-lg bg-primary/20 text-primary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative z-10 pointer-events-auto w-10 h-10 rounded-lg
+                               bg-primary/20 text-primary hover:bg-primary
+                               hover:text-primary-foreground flex items-center
+                               justify-center transition-all duration-300"
                     whileHover={{ scale: 1.1, rotate: 10 }}
                     whileTap={{ scale: 0.95 }}
-                    variants={itemVariants}
                   >
                     <Icon size={20} />
                   </motion.a>
@@ -74,8 +89,15 @@ export function Footer() {
 
           {/* Contact */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold text-foreground mb-4">Contact</h3>
-            <motion.div className="space-y-4" variants={containerVariants} initial="hidden" whileInView="visible">
+            <h3 className="text-xl font-bold text-foreground mb-4">
+              Contact
+            </h3>
+            <motion.div
+              className="space-y-4"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+            >
               <motion.a
                 href="mailto:manish.jha@tv9.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
@@ -85,6 +107,7 @@ export function Footer() {
                 <Mail size={20} className="text-primary flex-shrink-0" />
                 <span>manish.jha@tv9.com</span>
               </motion.a>
+
               <motion.div
                 className="flex items-center gap-3 text-muted-foreground"
                 variants={itemVariants}
@@ -92,6 +115,7 @@ export function Footer() {
                 <Phone size={20} className="text-primary flex-shrink-0" />
                 <span>+91-9871889081</span>
               </motion.div>
+
               <motion.div
                 className="flex items-center gap-3 text-muted-foreground"
                 variants={itemVariants}
@@ -104,21 +128,32 @@ export function Footer() {
 
           {/* Quick Links */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold text-foreground mb-4">Quick Links</h3>
-            <motion.ul className="space-y-2" variants={containerVariants} initial="hidden" whileInView="visible">
-              {['Major Stories', 'International Assignments', 'Gallery', 'Awards', 'Current Projects'].map(
-                (link, i) => (
-                  <motion.li key={i} variants={itemVariants}>
-                    <a
-                      href="#"
-                      className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 group"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {link}
-                    </a>
-                  </motion.li>
-                ),
-              )}
+            <h3 className="text-xl font-bold text-foreground mb-4">
+              Quick Links
+            </h3>
+            <motion.ul
+              className="space-y-2"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+            >
+              {[
+                'Major Stories',
+                'International Assignments',
+                'Gallery',
+                'Awards',
+                'Current Projects',
+              ].map((link, i) => (
+                <motion.li key={i} variants={itemVariants}>
+                  <a
+                    href="#"
+                    className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link}
+                  </a>
+                </motion.li>
+              ))}
             </motion.ul>
           </motion.div>
         </motion.div>
@@ -139,7 +174,12 @@ export function Footer() {
           transition={{ duration: 0.6 }}
         >
           <p>© {currentYear} Manish Jha. All rights reserved.</p>
-          <motion.div className="flex gap-6" whileInView={{ x: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+
+          <motion.div
+            className="flex gap-6"
+            whileInView={{ x: [0, 5, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
             <a href="#" className="hover:text-primary transition-colors">
               Privacy Policy
             </a>
