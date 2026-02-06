@@ -6,6 +6,7 @@ import { BioSection } from '@/components/bio-section'
 import { MajorStories } from '@/components/major-stories'
 import { InternationalAssignments } from '@/components/international-assignments'
 import { MediaShowcase } from '@/components/media-showcase'
+import { AwardsShowcase } from '@/components/awards-showcase'
 import { Achievements } from '@/components/achievements'
 import { CurrentProject } from '@/components/current-project'
 import { Footer } from '@/components/footer'
@@ -19,6 +20,7 @@ export default function Home() {
       <MajorStories />
       <InternationalAssignments />
       <MediaShowcase />
+      <AwardsShowcase />
       <Achievements />
       <CurrentProject />
       <Footer />

@@ -10,27 +10,27 @@ export function HeroSection() {
 
   const images = [
     {
-      src: '/images/1.jpeg',
+      src: '/images/photo-1-press.jpg',
       alt: 'War Correspondent - Press Coverage',
       title: 'Press Coverage',
     },
     {
-      src: '/images/2.jpeg',
+      src: '/images/photo-2-studio.jpg',
       alt: 'Studio Professional',
       title: 'Studio Professional',
     },
     {
-      src: '/images/3.jpeg',
+      src: '/images/photo-3-international.jpg',
       alt: 'International Assignment',
       title: 'International Assignment',
     },
     {
-      src: '/images/4.jpeg',
+      src: '/images/photo-4-award.jpg',
       alt: 'Award & Recognition',
       title: 'Award & Recognition',
     },
     {
-      src: '/images/5.jpeg',
+      src: '/images/photo-5-reporting.jpg',
       alt: 'Global Reporting',
       title: 'Global Reporting',
     },
