@@ -13,7 +13,7 @@ export function Navigation() {
     { label: 'Assignments', href: '#assignments' },
     { label: 'Media', href: '#media' },
     { label: 'Awards', href: '#awards' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact', href: '/contact' },
   ]
 
   return (
@@ -26,7 +26,8 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <motion.div
+          <motion.a
+            href="#"
             className="flex items-center gap-2 cursor-pointer"
             whileHover={{ scale: 1.05 }}
           >
@@ -34,7 +35,7 @@ export function Navigation() {
               <span className="text-primary-foreground font-bold text-lg">MJ</span>
             </div>
             <span className="text-foreground font-bold text-lg hidden sm:inline">Manish Jha</span>
-          </motion.div>
+          </motion.a>
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -52,7 +53,7 @@ export function Navigation() {
 
           {/* CTA Button */}
           <motion.a
-            href="https://rajatsharma.in"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-block px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-shadow text-sm"

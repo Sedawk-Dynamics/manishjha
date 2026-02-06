@@ -70,7 +70,7 @@ export function MediaShowcase() {
   }
 
   return (
-    <section className="py-20 bg-background relative">
+    <section id="media" className="py-20 bg-background relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Photos Section */}
         <motion.div

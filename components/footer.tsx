@@ -138,19 +138,19 @@ export function Footer() {
               whileInView="visible"
             >
               {[
-                'Major Stories',
-                'International Assignments',
-                'Gallery',
-                'Awards',
-                'Current Projects',
+                { label: 'About', href: '#about' },
+                { label: 'Major Stories', href: '#stories' },
+                { label: 'Assignments', href: '#assignments' },
+                { label: 'Gallery', href: '#media' },
+                { label: 'Awards', href: '#awards' },
               ].map((link, i) => (
                 <motion.li key={i} variants={itemVariants}>
                   <a
-                    href="#"
+                    href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link}
+                    {link.label}
                   </a>
                 </motion.li>
               ))}
@@ -187,6 +187,34 @@ export function Footer() {
               Terms of Service
             </a>
           </motion.div>
+        </motion.div>
+
+        {/* Divider */}
+        <motion.div
+          className="h-px bg-gradient-to-r from-transparent via-border to-transparent my-6"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 1 }}
+        />
+
+        {/* Credit Line */}
+        <motion.div
+          className="text-center text-xs text-muted-foreground"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <p>
+            Designed and developed by{' '}
+            <a
+              href="https://webel.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline transition-colors"
+            >
+              webel.io
+            </a>
+          </p>
         </motion.div>
       </div>
     </footer>

@@ -1,3 +1,5 @@
+
+
 'use client'
 
 import { motion } from 'framer-motion'
@@ -45,7 +47,7 @@ export function AwardsShowcase() {
     {
       title: 'Medal Announcement',
       description: 'Russian Federation Medal announcement video',
-      src: '/videos/medel-announcement.mp4',
+      src: '/videos/Medel-announcement.mp4',
     },
   ]
 

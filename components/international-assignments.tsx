@@ -70,7 +70,7 @@ export function InternationalAssignments() {
   }
 
   return (
-    <section className="py-20 bg-card/50 relative">
+    <section id="assignments" className="py-20 bg-card/50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
