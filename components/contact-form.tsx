@@ -74,7 +74,7 @@ export function ContactForm() {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+91-9871889081',
+      content: '987xxxxxxx',
       link: 'tel:+919871889081',
     },
     {

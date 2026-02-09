@@ -105,7 +105,7 @@ export function HeroSection() {
                 className="text-xl lg:text-2xl text-primary font-semibold leading-tight"
                 variants={itemVariants}
               >
-                Journalist | Global Affairs & Security Analyst | Strategic Advisor
+                Journalist | Global Affairs & Security Analyst | Strategic Expert
               </motion.p>
               <motion.p
                 className="text-lg text-muted-foreground font-medium"
@@ -145,16 +145,16 @@ export function HeroSection() {
             {/* Stats */}
             <motion.div className="grid grid-cols-3 gap-6 pt-8 border-t border-border" variants={itemVariants}>
               <div>
-                <p className="text-3xl font-bold text-primary">20+</p>
-                <p className="text-muted-foreground text-sm">Years Experience</p>
+                <p className="text-3xl font-bold text-primary">1000+</p>
+                <p className="text-muted-foreground text-sm">Stories & Live Reporting</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-primary">25+</p>
                 <p className="text-muted-foreground text-sm">Countries Covered</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-primary">100+</p>
-                <p className="text-muted-foreground text-sm">Award & Recognition</p>
+                <p className="text-3xl font-bold text-primary">20+</p>
+                <p className="text-muted-foreground text-sm">Years Experience</p>
               </div>
             </motion.div>
           </motion.div>

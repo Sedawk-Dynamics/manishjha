@@ -111,21 +111,36 @@ export function BioSection() {
             <h3 className="text-2xl font-bold text-foreground">Career Milestones</h3>
             <div className="space-y-4">
               {[
+                { year: '2019-Present', event: 'Executive Editor, TV9 Bharatvarsh | Author at News9Live', links: { tv9: 'https://www.tv9hindi.com/author/manish', news9: 'https://www.news9live.com/author/manish-jha-2' } },
                 { year: '2025', event: 'Awarded Russia\'s Prestigious Honest View Award for Unbiased Journalism' },
-                { year: '2023', event: 'Appointed Executive Editor at TV9 Bharatvarsh' },
-                { year: '2020-2024', event: 'Extensive Coverage of Ukraine Conflict and Geopolitical Shifts' },
-                { year: '2015-2020', event: 'Senior Correspondent Covering Middle East and South Asian Affairs' },
-                { year: '2005+', event: 'Pioneering War Correspondent, 25+ Countries Covered' },
+                { year: '2007-2019', event: 'Senior Correspondent, INDIA TV - Extensive Coverage of International Affairs' },
+                { year: '2005-2007', event: 'Reporter, DD News - Foundation of Global Reporting' },
               ].map((milestone, idx) => (
                 <motion.div
                   key={idx}
                   variants={itemVariants}
                   className="flex gap-4 items-start bg-background rounded-lg p-4 border border-border/30 hover:border-primary/20 transition-colors"
                 >
-                  <div className="w-20 flex-shrink-0">
+                  <div className="w-24 flex-shrink-0">
                     <span className="text-primary font-bold text-sm">{milestone.year}</span>
                   </div>
-                  <p className="text-foreground leading-relaxed">{milestone.event}</p>
+                  <div className="flex-1">
+                    <p className="text-foreground leading-relaxed">{milestone.event}</p>
+                    {milestone.links && (
+                      <div className="flex gap-3 mt-2 text-xs">
+                        {milestone.links.tv9 && (
+                          <a href={milestone.links.tv9} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                            TV9 Hindi Profile
+                          </a>
+                        )}
+                        {milestone.links.news9 && (
+                          <a href={milestone.links.news9} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                            News9Live Profile
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </motion.div>
               ))}
             </div>

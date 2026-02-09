@@ -155,7 +155,7 @@ export function Achievements() {
             { label: 'Years Active', value: '20+' },
             { label: 'Countries', value: '25+' },
             { label: '1 international award / Medal', value: '100+' },
-            { label: 'Stories', value: '500+' },
+            { label: 'Stories', value: '1000+' },
           ].map((stat, i) => (
             <motion.div
               key={i}

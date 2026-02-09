@@ -1,5 +1,3 @@
-
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -72,7 +70,7 @@ export function AwardsShowcase() {
   }
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-background via-card/50 to-background">
+    <section id="awards" className="relative py-20 bg-gradient-to-b from-background via-card/50 to-background">
       {/* Decorative Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -135,7 +133,7 @@ export function AwardsShowcase() {
                 >
                   <div className="relative h-96 w-full overflow-hidden bg-muted">
                     <Image
-                      src={award.src}
+                      src={award.src || "/placeholder.svg"}
                       alt={award.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -188,17 +186,12 @@ export function AwardsShowcase() {
                 whileHover={{ y: -10 }}
               >
                 <div className="relative w-full aspect-video bg-black">
-                 <video
-  src={video.src}
-  autoPlay
-  loop
-  muted
-  playsInline
-  controls
-  className="w-full h-full object-cover"
-  controlsList="nodownload"
-/>
-
+                  <video
+                    src={video.src}
+                    controls
+                    className="w-full h-full object-cover"
+                    controlsList="nodownload"
+                  />
                 </div>
 
                 <div className="p-6 bg-card border-t border-primary/20">

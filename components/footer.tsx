@@ -113,7 +113,7 @@ export function Footer() {
                 variants={itemVariants}
               >
                 <Phone size={20} className="text-primary flex-shrink-0" />
-                <span>+91-9871889081</span>
+                <span>987xxxxxxx</span>
               </motion.div>
 
               <motion.div
