@@ -70,11 +70,32 @@ export function BioSection() {
             variants={itemVariants}
             className="bg-background rounded-xl p-8 border border-border/50"
           >
-            <p className="text-lg text-muted-foreground leading-relaxed space-y-4">
-              With over 20 years of experience as a war correspondent and foreign affairs specialist, I've dedicated my career to bringing truth
-              and clarity to the world's most complex geopolitical situations. Currently serving as Executive Editor at TV9 Bharatvarsh, I combine
-              journalistic excellence with editorial leadership.
-            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+  With over 20 years of experience as a war correspondent and foreign affairs specialist, I've dedicated my career to bringing truth
+  and clarity to the world's most complex geopolitical situations. Currently serving as Executive Editor at TV9 Bharatvarsh | War Correspondent | International Assignments.
+</p>
+
+{/* Credibility Links */}
+<div className="flex flex-wrap gap-4 mt-4">
+  <a
+    href="https://www.tv9hindi.com/author/manish"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+  >
+    Visit TV9 Hindi Profile
+  </a>
+
+  <a
+    href="https://www.news9live.com/author/manish-jha-2"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+  >
+    Visit News9Live Profile
+  </a>
+</div>
+
             <p className="text-lg text-muted-foreground leading-relaxed mt-4">
               My reporting spans conflict zones, international diplomacy, and humanitarian crises across six continents. I pride myself on delivering
               nuanced, ground-truth reporting that cuts through noise and misinformation. In 2025, I received Russia's prestigious Honest View Award,
@@ -111,11 +132,30 @@ export function BioSection() {
             <h3 className="text-2xl font-bold text-foreground">Career Milestones</h3>
             <div className="space-y-4">
               {[
-                { year: '2019-Present', event: 'Executive Editor, TV9 Bharatvarsh | Author at News9Live', links: { tv9: 'https://www.tv9hindi.com/author/manish', news9: 'https://www.news9live.com/author/manish-jha-2' } },
-                { year: '2025', event: 'Awarded Russia\'s Prestigious Honest View Award for Unbiased Journalism' },
-                { year: '2007-2019', event: 'Senior Correspondent, INDIA TV - Extensive Coverage of International Affairs' },
-                { year: '2005-2007', event: 'Reporter, DD News - Foundation of Global Reporting' },
-              ].map((milestone, idx) => (
+  {
+    year: '2019–Present',
+    event: 'Executive Editor, TV9 Bharatvarsh | Leading international coverage, war reporting, and global strategic analysis',
+    links: {
+      tv9: 'https://www.tv9hindi.com/author/manish',
+      news9: 'https://www.news9live.com/author/manish-jha-2',
+    },
+  },
+  {
+    year: '2025',
+    event: "Awarded Russia's Prestigious Honest View Award for Excellence in International Journalism",
+  },
+  {
+    year: '2007–2019',
+    event:
+      'Senior Correspondent, India TV — Covered national and international affairs, policy, governance, and global conflicts with extensive investigative and on-ground reporting',
+  },
+  {
+    year: '2005–2007',
+    event:
+      'Reporter, DD News — Reported on national affairs with primary focus on Parliament of India, Judiciary, and investigative agencies',
+  },
+]
+.map((milestone, idx) => (
                 <motion.div
                   key={idx}
                   variants={itemVariants}

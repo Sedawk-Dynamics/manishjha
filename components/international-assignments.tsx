@@ -6,8 +6,8 @@ import { MapPin, Calendar } from 'lucide-react'
 export function InternationalAssignments() {
   const assignments = [
     {
-      country: 'Ukraine',
-      region: 'Donbass',
+      country: 'Russia - Ukraine',
+      region: 'Moscow, Crimea, Donbass',
       period: '2022-2025',
       highlights: 'War Zone Reporting, Conflict Analysis',
       color: 'from-blue-500/20 to-blue-600/20',
@@ -33,6 +33,20 @@ export function InternationalAssignments() {
       highlights: 'Regional Affairs, Security Analysis',
       color: 'from-orange-500/20 to-orange-600/20',
     },
+   {
+    country: 'Israel & Middle East',
+    region: 'Tel Aviv, Tehran',
+    period: '2023-2025',
+    highlights: 'Middle East Conflict, Regional Security, Diplomacy',
+    color: 'from-yellow-500/20 to-orange-600/20',
+  },
+  {
+    country: 'Europe',
+    region: 'Brussels, Paris, Berlin',
+    period: '2021-2025',
+    highlights: 'EU Politics, NATO, Regional Affairs',
+    color: 'from-purple-500/20 to-purple-700/20',
+  },
   ]
 
   const containerVariants = {

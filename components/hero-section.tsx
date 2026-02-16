@@ -1,4 +1,6 @@
 'use client'
+import { Linkedin, Twitter, Facebook } from 'lucide-react'
+
 
 import { motion } from 'framer-motion'
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
@@ -7,6 +9,24 @@ import Image from 'next/image'
 
 export function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const socialLinks = [
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/manish-jha-02715ab0',
+  },
+  {
+    icon: Twitter,
+    label: 'Twitter',
+    href: 'https://x.com/manishjhatweets',
+  },
+  {
+    icon: Facebook,
+    label: 'Facebook',
+    href: 'https://www.facebook.com/share/1BvuHeMa4a/',
+  },
+]
+
 
   const images = [
     {
@@ -101,12 +121,36 @@ export function HeroSection() {
               >
                 Manish Jha
               </motion.h1>
-              <motion.p
-                className="text-xl lg:text-2xl text-primary font-semibold leading-tight"
-                variants={itemVariants}
-              >
-                Journalist | Global Affairs & Security Analyst | Strategic Expert
-              </motion.p>
+            <motion.p
+  className="text-xl lg:text-2xl text-primary font-semibold leading-tight"
+  variants={itemVariants}
+>
+  Journalist | Global Affairs & Security Analyst | Strategic Expert
+</motion.p>
+{/* Social Media Links */}
+<motion.div
+  className="flex items-center gap-4 pt-2"
+  variants={itemVariants}
+>
+  {socialLinks.map((social, index) => {
+    const Icon = social.icon
+    return (
+      <motion.a
+        key={index}
+        href={social.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center w-11 h-11 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label={social.label}
+      >
+        <Icon size={20} />
+      </motion.a>
+    )
+  })}
+</motion.div>
+
               <motion.p
                 className="text-lg text-muted-foreground font-medium"
                 variants={itemVariants}
