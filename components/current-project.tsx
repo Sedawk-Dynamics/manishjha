@@ -146,7 +146,7 @@ export function CurrentProject() {
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <p className="text-lg text-muted-foreground mb-6">Interested in collaboration or speaking opportunities?</p>
+          {/* <p className="text-lg text-muted-foreground mb-6">Interested in collaboration or speaking opportunities?</p> */}
           <motion.button
             className="px-10 py-3 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:shadow-xl transition-shadow"
             whileHover={{ scale: 1.05 }}

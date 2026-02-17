@@ -75,7 +75,15 @@ export function BioSection() {
   and clarity to the world's most complex geopolitical situations. Currently serving as Executive Editor at TV9 Bharatvarsh | War Correspondent | International Assignments.
 </p>
 
-{/* Credibility Links */}
+
+
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              My reporting spans conflict zones, international diplomacy, and humanitarian crises across six continents. I pride myself on delivering
+              nuanced, ground-truth reporting that cuts through noise and misinformation. In 2025, I received Russia's prestigious Honest View Award,
+              recognizing my commitment to unbiased, factual journalism.
+            </p>
+           
+                     {/* Credibility Links */}
 <div className="flex flex-wrap gap-4 mt-4">
   <a
     href="https://www.tv9hindi.com/author/manish"
@@ -96,12 +104,9 @@ export function BioSection() {
   </a>
 </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-              My reporting spans conflict zones, international diplomacy, and humanitarian crises across six continents. I pride myself on delivering
-              nuanced, ground-truth reporting that cuts through noise and misinformation. In 2025, I received Russia's prestigious Honest View Award,
-              recognizing my commitment to unbiased, factual journalism.
-            </p>
           </motion.div>
+
+
 
           {/* Highlights grid */}
           <motion.div
@@ -126,6 +131,8 @@ export function BioSection() {
               )
             })}
           </motion.div>
+
+          
 
           {/* Timeline/milestones */}
           <motion.div variants={itemVariants} className="space-y-6">

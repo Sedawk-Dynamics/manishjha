@@ -10,12 +10,7 @@ import Image from 'next/image'
 export function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const socialLinks = [
-  {
-    icon: Linkedin,
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/manish-jha-02715ab0',
-  },
-  {
+     {
     icon: Twitter,
     label: 'Twitter',
     href: 'https://x.com/manishjhatweets',
@@ -25,6 +20,12 @@ export function HeroSection() {
     label: 'Facebook',
     href: 'https://www.facebook.com/share/1BvuHeMa4a/',
   },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/manish-jha-02715ab0',
+  },
+ 
 ]
 
 
