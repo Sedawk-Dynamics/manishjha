@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manish Jha - War Correspondent & Journalist</title>
+    <link>https://www.manishjha.org</link>
+    <description>Award-winning war correspondent and Executive Editor at TV9 Bharatvarsh covering international conflicts, diplomacy, and global affairs from 25+ countries.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Feb 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.manishjha.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://www.manishjha.org/images/photo-1-press.jpg</url>
+      <title>Manish Jha - War Correspondent</title>
+      <link>https://www.manishjha.org</link>
+    </image>
+
+    <item>
+      <title>International Conflict Reporting and War Correspondence</title>
+      <link>https://www.manishjha.org#stories</link>
+      <description>Award-winning coverage of major international conflicts including Ukraine War Coverage (2022-2025), China-Taiwan tensions, and Middle Eastern affairs. Experienced war correspondent with 20+ years in conflict zones.</description>
+      <content:encoded><![CDATA[
+        <p>Extensive coverage of international conflicts and geopolitical tensions:</p>
+        <ul>
+          <li>Ukraine War Coverage - Donbass, 2022-2025</li>
+          <li>China & Taiwan Relations - Beijing, Taipei, 2023-2025</li>
+          <li>US Presidential Elections and UNGA Coverage - 2019-2025</li>
+          <li>South Asian Affairs - Bangladesh, Nepal, Sri Lanka</li>
+        </ul>
+      ]]></content:encoded>
+      <pubDate>Wed, 17 Feb 2026 12:00:00 GMT</pubDate>
+      <author>manish@manishjha.com</author>
+      <category>International Affairs</category>
+      <category>War Reporting</category>
+      <category>Journalism</category>
+      <guid>https://www.manishjha.org#stories</guid>
+    </item>
+
+    <item>
+      <title>Russia's Honest View Award 2025 - Recognition for Unbiased Journalism</title>
+      <link>https://www.manishjha.org#awards</link>
+      <description>Honored with Russia's prestigious Honest View Award 2025 for exceptional journalism and unbiased reporting on international affairs. Recognition from Russian Ministry of Foreign Affairs.</description>
+      <content:encoded><![CDATA[
+        <p>Prestigious international recognition for journalistic excellence:</p>
+        <ul>
+          <li>Honest View Award 2025 - Russia's Most Prestigious Journalism Award</li>
+          <li>Recognition from Russian Ministry of Foreign Affairs</li>
+          <li>International Friendship and Cooperation Honor</li>
+          <li>Certificate of Excellence in Foreign Correspondence</li>
+        </ul>
+      ]]></content:encoded>
+      <pubDate>Wed, 15 Feb 2026 10:00:00 GMT</pubDate>
+      <author>manish@manishjha.com</author>
+      <category>Awards</category>
+      <category>Journalism Recognition</category>
+      <guid>https://www.manishjha.org#awards</guid>
+    </item>
+
+    <item>
+      <title>Executive Editor at TV9 Bharatvarsh - Leading International Journalism</title>
+      <link>https://www.manishjha.org</link>
+      <description>Executive Editor at TV9 Bharatvarsh - Overseeing international news coverage and editorial strategy. Career spanning 20+ years in broadcast and digital journalism.</description>
+      <content:encoded><![CDATA[
+        <p>Career highlights in broadcast journalism:</p>
+        <ul>
+          <li>Executive Editor, TV9 Bharatvarsh (2019-Present)</li>
+          <li>Senior Correspondent, INDIA TV (2007-2019)</li>
+          <li>Reporter, DD News (2005-2007)</li>
+          <li>1000+ Stories and Live Reporting Coverage</li>
+          <li>25+ Countries Covered for International Affairs</li>
+        </ul>
+      ]]></content:encoded>
+      <pubDate>Wed, 10 Feb 2026 14:30:00 GMT</pubDate>
+      <author>manish@manishjha.com</author>
+      <category>Television News</category>
+      <category>International Journalism</category>
+      <guid>https://www.manishjha.org</guid>
+    </item>
+
+  </channel>
+</rss>
